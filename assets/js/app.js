@@ -1,0 +1,1 @@
+particlesJS.load('particles-js', '../assets/particles/raise_up.json');
