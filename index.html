@@ -183,13 +183,18 @@
   <main>
     <div class="header" id="header">
       <div id="element"></div>
-      <script async type="text/javascript">lottie.loadAnimation({
+      <script type="text/javascript">
+        if(window.attachEvent || window.onload){
+        lottie.loadAnimation({
           container: document.getElementById('element'), // the dom element that will contain the animation
           renderer: 'svg',
           loop: true,
           autoplay: true,
           path: 'assets/data.json' // the path to the animation json
-        });</script>
+        });}else{
+         console.log("Error lite.loadAnimation"); 
+        }
+      </script>
       <div class="header_background" id="background"></div>
       <div class="header__container container">
         <h1 class="animated fadeInUp">Alan</h1>
